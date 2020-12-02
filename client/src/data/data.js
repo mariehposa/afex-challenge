@@ -15,3 +15,12 @@ export const allSell = [
     {id: 4, security: 'SCOC(Cocoa)', qty: 247.00, offerPrice: 96000.00},
     {id: 5, security: 'SMAZ(Maize)', qty: 142.00, offerPrice: 14850.00}
 ]
+
+export const fetcBuy = [
+    {id: 1, security: 'FETC(Fair Trade ETC)', qty: 10.00, bidPrice: 9750.00},
+    {id: 2, security: 'FETC(Fair Trade ETC)', qty: 1.00, bidPrice: 9750.00}
+]
+
+export const fetcSell = [
+    {id: 1, security: 'FETC(Fair Trade ETC)', qty: 8558.00, offerPrice: 10000.00}
+]

@@ -21,7 +21,7 @@ export default function Card() {
             </div>
 
             <div>
-                <p>Buy Orders</p>
+                <p>Sell Orders</p>
                 <table>
                     <tr>
                         <th>Security</th>

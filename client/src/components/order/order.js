@@ -18,11 +18,12 @@ import {
 } from "../../data/data";
 
 export default function Order() {
-    const [length, setLength] = useState(3);
+    // const [length, setLength] = useState(3);
+    // console.log(allSell)
 
-    function handleChange(e) {
-        setLength({value: e.target.value});  
-    }
+    // function handleChange(e) {
+    //     setLength({value: e.target.value});  
+    // }
     
     return (
         <div>
@@ -60,7 +61,7 @@ export default function Order() {
             </div>
             
             <div>
-                <select onChange={handleChange}>
+                <select>
                     <option value="3">3</option>
                     <option value="5">5</option>
                     <option value="10">10</option>

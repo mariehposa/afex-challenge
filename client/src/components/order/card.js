@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Card() {
+export default function Card({data}) {
     return (
         <div>
             <div>
@@ -12,9 +12,9 @@ export default function Card() {
                         <th>Bid price</th>
                     </tr>
                     <tr>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
+                        <td>{data.security}</td>
+                        <td>{data.qty}</td>
+                        <td>{data.bidPrice}</td>
                         <td>No stock</td>
                     </tr>
                 </table>
@@ -29,9 +29,9 @@ export default function Card() {
                         <th>Offer price</th>
                     </tr>
                     <tr>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
+                        <td>{data.security}</td>
+                        <td>{data.qty}</td>
+                        <td>{data.offerPrice}</td>
                         <td>data</td>
                     </tr>
                 </table>

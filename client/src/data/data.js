@@ -57,3 +57,12 @@ export const smazSell = [
     {id: 4, security: 'SMAZ(Maize)', qty: 1.00, offerPrice: 15221.25},
     {id: 5, security: 'SMAZ(Maize)', qty: 1.00, offerPrice: 215000.00}
 ]
+
+export const fetcBuy = [
+    {id: 1, security: 'SPRL(Paddy Rice)', qty: 250.00, bidPrice: 19350.00},
+    {id: 2, security: 'SPRL(Paddy Rice)', qty: 3.00, bidPrice: 16050.00}
+]
+
+export const fetcSell = [
+    {id: 1, security: 'SPRL(Paddy Rice)', qty: 229.00, offerPrice: 19400.00}
+]

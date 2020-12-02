@@ -1,5 +1,3 @@
-import { Sprl } from "../components/order/order";
-
 export const allBuy = [
     {id: 1, security: 'SPRL(Paddy Rice)', qty: 250.00, bidPrice: 19350.00},
     {id: 2, security: 'SCOC(Cocoa)', qty: 250.00, bidPrice: 95950.00},
@@ -23,4 +21,12 @@ export const fetcBuy = [
 
 export const fetcSell = [
     {id: 1, security: 'FETC(Fair Trade ETC)', qty: 8558.00, offerPrice: 10000.00}
+]
+
+export const ssbsBuy = [
+    {id: 1, security: 'SSBS(Soyabean)', qty: 1.00, bidPrice: 17800.00},
+    {id: 2, security: 'SSBS(Soyabean)', qty: 1.00, bidPrice: 17800.00},
+    {id: 3, security: 'SSBS(Soyabean)', qty: 20.00, bidPrice: 18000.00},
+    {id: 4, security: 'SSBS(Soyabean)', qty: 3.00, bidPrice: 15300.00},
+    {id: 5, security: 'SSBS(Soyabean)', qty: 1.00, bidPrice: 14750.00}
 ]

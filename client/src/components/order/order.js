@@ -1,5 +1,21 @@
 import React, {useState} from 'react';
 import { Route, NavLink } from "react-router-dom";
+import Card from './card';
+import {
+  allBuy,
+  allBuy,
+  fetcBuy,
+  fetcSell,
+  scocBuy,
+  scocSell,
+  smazBuy,
+  smazSell,
+  sprlBuy,
+  sprlSell,
+  ssbsBuy,
+  ssgmSell,
+  ssgmSell,
+} from "../../data/data";
 
 export default function Order() {
     const [length, setLength] = useState(3);

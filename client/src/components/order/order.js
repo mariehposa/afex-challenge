@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Route } from "react-router-dom";
+import { Route, NavLink } from "react-router-dom";
 
 export default function Order() {
     const [length, setLength] = useState(3);
@@ -32,14 +32,14 @@ export default function Order() {
                 </div>
 
                 <div> 
-                    <Route exact path="/" component={all} />
-                    <Route path="/fetc" component={fetc} />
-                    <Route path="/ssbs" component={ssbs} />
-                    <Route path="/ssgm" component={ssgm} />
-                    <Route path="/smaz" component={smaz} />
-                    <Route path="/cexp" component={cexp} />
-                    <Route path="/sprl" component={sprl} />
-                    <Route path="/scoc" component={scoc} />
+                    <Route exact path="/" component={All} />
+                    <Route path="/fetc" component={Fetc} />
+                    <Route path="/ssbs" component={Ssbs} />
+                    <Route path="/ssgm" component={Ssgm} />
+                    <Route path="/smaz" component={Smaz} />
+                    <Route path="/cexp" component={Cexp} />
+                    <Route path="/sprl" component={Sprl} />
+                    <Route path="/scoc" component={Scoc} />
                 </div> 
             </div>
             
@@ -54,6 +54,69 @@ export default function Order() {
                     <option value="20">100</option>
                 </select>
             </div>
+        </div>
+    )
+}
+
+export function All(){
+    return (
+        <div>
+            
+        </div>
+    )
+}
+
+export function Fetc(){
+    return (
+        <div>
+
+        </div>
+    )
+}
+
+export function Ssbs(){
+    return (
+        <div>
+
+        </div>
+    )
+}
+
+export function Ssgm(){
+    return (
+        <div>
+
+        </div>
+    )
+}
+export function Smaz(){
+    return (
+        <div>
+
+        </div>
+    )
+}
+
+export function Cexp(){
+    return (
+        <div>
+
+        </div>
+    )
+}
+
+export function Sprl(){
+    return (
+        <div>
+
+        </div>
+    )
+}
+
+export function Scoc(){
+    return (
+        <div>
+
         </div>
     )
 }

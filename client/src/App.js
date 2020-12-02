@@ -1,9 +1,9 @@
-import './App.css';
+import Order from "./components/order/order";
 
 function App() {
   return (
     <div>
-      
+      <Order />
     </div>
   );
 }

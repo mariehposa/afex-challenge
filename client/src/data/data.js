@@ -30,3 +30,14 @@ export const ssbsBuy = [
     {id: 4, security: 'SSBS(Soyabean)', qty: 3.00, bidPrice: 15300.00},
     {id: 5, security: 'SSBS(Soyabean)', qty: 1.00, bidPrice: 14750.00}
 ]
+
+export const ssgmBuy = [
+    {id: 1, security: 'SSGM(Sorghum)', qty: 1.00, bidPrice: 17500.00},
+    {id: 2, security: 'SSGM(Sorghum)', qty: 1.00, bidPrice: 17500.00},
+    {id: 3, security: 'SSGM(Sorghum)', qty: 1.00, bidPrice: 17500.00},
+    {id: 4, security: 'SSGM(Sorghum)', qty: 1.00, bidPrice: 12700.00}
+]
+
+export const ssgmSell = [
+    {id: 1, security: 'SSGM(Sorghum)', qty: 1.00, offerPrice: 175000.00}
+]

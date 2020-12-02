@@ -3,7 +3,7 @@ import { Route, NavLink } from "react-router-dom";
 import Card from './card';
 import {
   allBuy,
-  allBuy,
+  allSell,
   fetcBuy,
   fetcSell,
   scocBuy,
@@ -14,7 +14,7 @@ import {
   sprlSell,
   ssbsBuy,
   ssgmSell,
-  ssgmSell,
+  ssgmBuy,
 } from "../../data/data";
 
 export default function Order() {
@@ -77,7 +77,16 @@ export default function Order() {
 export function All(){
     return (
         <div>
-            
+            <div>
+                {
+                    allBuy.map(data => <Card key={data.id} data={data} />)
+                }
+            </div>
+            <div>
+                {
+                    allSell.map(data => <Card key={data.id} data={data} />)
+                }
+            </div>
         </div>
     )
 }
@@ -85,7 +94,16 @@ export function All(){
 export function Fetc(){
     return (
         <div>
-
+            <div>
+                {
+                    fetcBuy.map(data => <Card key={data.id} data={data} />)
+                }
+            </div>
+            <div>
+                {
+                    fetcSell.map(data => <Card key={data.id} data={data} />)
+                }
+            </div>
         </div>
     )
 }
@@ -93,7 +111,14 @@ export function Fetc(){
 export function Ssbs(){
     return (
         <div>
-
+            <div>
+                {
+                    ssbsBuy.map(data => <Card key={data.id} data={data} />)
+                }
+            </div>
+            <div>
+                <p>No data</p>
+            </div>
         </div>
     )
 }
@@ -101,14 +126,32 @@ export function Ssbs(){
 export function Ssgm(){
     return (
         <div>
-
+            <div>
+                {
+                    ssgmBuy.map(data => <Card key={data.id} data={data} />)
+                }
+            </div>
+            <div>
+                {
+                    ssgmSell.map(data => <Card key={data.id} data={data} />)
+                }
+            </div>
         </div>
     )
 }
 export function Smaz(){
     return (
         <div>
-
+            <div>
+                {
+                    smazBuy.map(data => <Card key={data.id} data={data} />)
+                }
+            </div>
+            <div>
+                {
+                    smazSell.map(data => <Card key={data.id} data={data} />)
+                }
+            </div>
         </div>
     )
 }
@@ -116,7 +159,12 @@ export function Smaz(){
 export function Cexp(){
     return (
         <div>
-
+            <div>
+                <p>No data</p>
+            </div>
+            <div>
+                <p>No data</p>
+            </div>
         </div>
     )
 }
@@ -124,7 +172,16 @@ export function Cexp(){
 export function Sprl(){
     return (
         <div>
-
+            <div>
+                {
+                    sprlBuy.map(data => <Card key={data.id} data={data} />)
+                }
+            </div>
+            <div>
+                {
+                    sprlSell.map(data => <Card key={data.id} data={data} />)
+                }
+            </div>
         </div>
     )
 }
@@ -132,7 +189,16 @@ export function Sprl(){
 export function Scoc(){
     return (
         <div>
-
+            <div>
+                {
+                    scocBuy.map(data => <Card key={data.id} data={data} />)
+                }
+            </div>
+            <div>
+                {
+                    scocSell.map(data => <Card key={data.id} data={data} />)
+                }
+            </div>
         </div>
     )
 }

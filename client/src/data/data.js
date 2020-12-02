@@ -41,3 +41,19 @@ export const ssgmBuy = [
 export const ssgmSell = [
     {id: 1, security: 'SSGM(Sorghum)', qty: 1.00, offerPrice: 175000.00}
 ]
+
+export const smazBuy = [
+    {id: 1, security: 'SMAZ(Maize)', qty: 250.00, bidPrice: 14800.00},
+    {id: 2, security: 'SMAZ(Maize)', qty: 1.00, bidPrice: 14478.75},
+    {id: 3, security: 'SMAZ(Maize)', qty: 1.00, bidPrice: 14500.00},
+    {id: 4, security: 'SMAZ(Maize)', qty: 1.00, bidPrice: 12000.00},
+    {id: 5, security: 'SMAZ(Maize)', qty: 1.00, bidPrice: 12100.00}
+]
+
+export const smazSell = [
+    {id: 1, security: 'SMAZ(Maize)', qty: 12.00, offerPrice: 14850.00},
+    {id: 2, security: 'SMAZ(Maize)', qty: 1.00, offerPrice: 15221.25},
+    {id: 3, security: 'SMAZ(Maize)', qty: 142.00, offerPrice: 14850.00},
+    {id: 4, security: 'SMAZ(Maize)', qty: 1.00, offerPrice: 15221.25},
+    {id: 5, security: 'SMAZ(Maize)', qty: 1.00, offerPrice: 215000.00}
+]

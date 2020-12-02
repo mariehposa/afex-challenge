@@ -48,19 +48,6 @@ export default function Order() {
                     </div>
                 </div>
 
-                <div> 
-                    <Route exact path="/" component={All} />
-                    <Route path="/fetc" component={Fetc} />
-                    <Route path="/ssbs" component={Ssbs} />
-                    <Route path="/ssgm" component={Ssgm} />
-                    <Route path="/smaz" component={Smaz} />
-                    <Route path="/cexp" component={Cexp} />
-                    <Route path="/sprl" component={Sprl} />
-                    <Route path="/scoc" component={Scoc} />
-                </div> 
-            </div>
-            
-            <div>
                 <select>
                     <option value="3">3</option>
                     <option value="5">5</option>
@@ -70,6 +57,17 @@ export default function Order() {
                     <option value="20">50</option>
                     <option value="20">100</option>
                 </select>
+            </div>
+            
+            <div>
+                <Route exact path="/" component={All} />
+                <Route path="/fetc" component={Fetc} />
+                <Route path="/ssbs" component={Ssbs} />
+                <Route path="/ssgm" component={Ssgm} />
+                <Route path="/smaz" component={Smaz} />
+                <Route path="/cexp" component={Cexp} />
+                <Route path="/sprl" component={Sprl} />
+                <Route path="/scoc" component={Scoc} />
             </div>
         </div>
     )

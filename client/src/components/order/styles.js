@@ -74,10 +74,41 @@ export const StyledFNav = styled(NavLink)`
 
 export const StyledAllOrder = styled.div`
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 `
 
 export const StyledOrder = styled.div`
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
+    width: 45%;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 3px 5px 13px 5px rgba(82, 63, 105, 0.05);
+`
+
+export const StyledTable = styled.table`
+    display: flex;
+    flex-direction: column;
+`
+
+export const StyledRow = styled.tr`
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 10px 6px;
+    text-align: left;
+
+    th, td {
+        width: 22%;
+    }
+
+    td:first-child {
+        width: 30%;
+    }
+
+    th:first-child {
+        width: 30%;
+    }
 `

@@ -1,23 +1,24 @@
 import React from 'react';
+import { StyledRow } from './styles';
 
 export function BuyCard({data}) {
     return (
-         <tr>
+        <StyledRow>
             <td>{data.security}</td>
             <td>{data.qty}</td>
             <td>{data.bidPrice}</td>
             <td>No stock</td>
-        </tr>
+        </StyledRow>
     )
 }
 
 export function SellCard({data}) {
     return (
-        <tr>
+        <StyledRow>
             <td>{data.security}</td>
             <td>{data.qty}</td>
             <td>{data.offerPrice}</td>
             <td>data</td>
-        </tr>
+        </StyledRow>
     )
 }

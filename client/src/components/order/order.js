@@ -26,7 +26,9 @@ import {
   SelectCover,
   StyledFNav,
   StyledOrder,
-  StyledAllOrder
+  StyledAllOrder,
+  StyledTable,
+  StyledRow
 } from "./styles";
 
 export default function Order() {
@@ -94,13 +96,14 @@ export function All() {
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Bid price</th>
-                </tr>
+                    <th></th>
+                </StyledRow>
             </thead>
 
             <tbody>
@@ -108,17 +111,18 @@ export function All() {
                 <BuyCard key={data.id} data={data} />
                 ))}
             </tbody>
-        </table>
+        </StyledTable>
       </StyledOrder>
       <StyledOrder>
         <p>Sell Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Offer price</th>
-                </tr>
+                    <th></th>
+                </StyledRow>
             </thead>
 
             <tbody>
@@ -126,7 +130,7 @@ export function All() {
                 <SellCard key={data.id} data={data} />
                 ))}
             </tbody>
-        </table>
+        </StyledTable>
       </StyledOrder>
     </StyledAllOrder>
   );
@@ -135,15 +139,15 @@ export function All() {
 export function Fetc() {
   return (
     <StyledAllOrder>
-      <StyledAll>
+      <StyledOrder>
         <p>Buy Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Bid price</th>
-                </tr>
+                </StyledRow>
             </thead>
 
             <tbody>
@@ -151,17 +155,17 @@ export function Fetc() {
                 <BuyCard key={data.id} data={data} />
                 ))}
             </tbody>
-        </table>
-      </StyledAll>
-      <StyledAll>
+        </StyledTable>
+      </StyledOrder>
+      <StyledOrder>
         <p>Sell Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Offer price</th>
-                </tr>
+                </StyledRow>
             </thead>
             
             <tbody>
@@ -169,8 +173,8 @@ export function Fetc() {
                 <SellCard key={data.id} data={data} />
                 ))}
             </tbody>
-        </table>
-      </StyledAll>
+        </StyledTable>
+      </StyledOrder>
     </StyledAllOrder>
   );
 }
@@ -180,13 +184,13 @@ export function Ssbs() {
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Bid price</th>
-                </tr>
+                </StyledRow>
             </thead>
             
             <tbody>
@@ -194,23 +198,23 @@ export function Ssbs() {
                 <BuyCard key={data.id} data={data} />
                 ))}
             </tbody>
-        </table>
+        </StyledTable>
       </StyledOrder>
       <StyledOrder>
         <p>Sell Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Offer price</th>
-                </tr>
+                </StyledRow>
             </thead>
             
             <tbody>
                 <p>No data</p>
             </tbody>
-        </table>
+        </StyledTable>
       </StyledOrder>
     </StyledAllOrder>
   );
@@ -221,13 +225,13 @@ export function Ssgm() {
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Bid price</th>
-                </tr>
+                </StyledRow>
             </thead>
             
             <tbody>
@@ -235,17 +239,17 @@ export function Ssgm() {
                 <BuyCard key={data.id} data={data} />
                 ))}
             </tbody>
-        </table>
+        </StyledTable>
       </StyledOrder>
       <StyledOrder>
         <p>Sell Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Offer price</th>
-                </tr>
+                </StyledRow>
             </thead>
             
             <tbody>
@@ -253,7 +257,7 @@ export function Ssgm() {
                 <SellCard key={data.id} data={data} />
                 ))}
             </tbody>
-        </table>
+        </StyledTable>
       </StyledOrder>
     </StyledAllOrder>
   );
@@ -263,13 +267,13 @@ export function Smaz() {
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Bid price</th>
-                </tr>
+                </StyledRow>
             </thead>
             
             <tbody>
@@ -277,17 +281,17 @@ export function Smaz() {
                 <BuyCard key={data.id} data={data} />
                 ))}
             </tbody>
-        </table>
+        </StyledTable>
       </StyledOrder>
       <StyledOrder>
         <p>Sell Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Offer price</th>
-                </tr>
+                </StyledRow>
             </thead>
             
             <tbody>
@@ -295,7 +299,7 @@ export function Smaz() {
                 <SellCard key={data.id} data={data} />
                 ))}
             </tbody>
-        </table>
+        </StyledTable>
       </StyledOrder>
     </StyledAllOrder>
   );
@@ -306,35 +310,35 @@ export function Cexp() {
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Bid price</th>
-                </tr>
+                </StyledRow>
             </thead>
             
             <tbody>
                 <p>No data</p>
             </tbody>
-        </table>
+        </StyledTable>
       </StyledOrder>
       <StyledOrder>
         <p>Sell Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Offer price</th>
-                </tr>
+                </StyledRow>
             </thead>
             
             <tbody>
                 <p>No data</p>
             </tbody>
-        </table>
+        </StyledTable>
       </StyledOrder>
     </StyledAllOrder>
   );
@@ -345,13 +349,13 @@ export function Sprl() {
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Bid price</th>
-                </tr>
+                </StyledRow>
             </thead>
             
             <tbody>
@@ -359,17 +363,17 @@ export function Sprl() {
                 <BuyCard key={data.id} data={data} />
                 ))}
             </tbody>
-        </table>
+        </StyledTable>
       </StyledOrder>
       <StyledOrder>
         <p>Sell Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Offer price</th>
-                </tr>
+                </StyledRow>
             </thead>
             
             <tbody>
@@ -377,7 +381,7 @@ export function Sprl() {
                 <SellCard key={data.id} data={data} />
                 ))}
             </tbody>
-        </table>
+        </StyledTable>
       </StyledOrder>
     </StyledAllOrder>
   );
@@ -388,13 +392,13 @@ export function Scoc() {
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Bid price</th>
-                </tr>
+                </StyledRow>
             </thead>
             
             <tbody>
@@ -402,17 +406,17 @@ export function Scoc() {
                 <BuyCard key={data.id} data={data} />
                 ))}
             </tbody>
-        </table>
+        </StyledTable>
       </StyledOrder>
       <StyledOrder>
         <p>Sell Orders</p>
-        <table>
+        <StyledTable>
             <thead>
-                <tr>
+                <StyledRow>
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Offer price</th>
-                </tr>
+                </StyledRow>
             </thead>
             
             <tbody>
@@ -420,7 +424,7 @@ export function Scoc() {
                 <SellCard key={data.id} data={data} />
                 ))}
             </tbody>
-        </table>
+        </StyledTable>
       </StyledOrder>
     </StyledAllOrder>
   );

@@ -93,14 +93,40 @@ export function All() {
   return (
     <StyledAllOrder>
       <StyledOrder>
-        {allBuy.map((data) => (
-          <BuyCard key={data.id} data={data} />
-        ))}
+        <p>Buy Orders</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Bid price</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {allBuy.map((data) => (
+                <BuyCard key={data.id} data={data} />
+                ))}
+            </tbody>
+        </table>
       </StyledOrder>
       <StyledOrder>
-        {allSell.map((data) => (
-          <SellCard key={data.id} data={data} />
-        ))}
+        <p>Sell Orders</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Offer price</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {allSell.map((data) => (
+                <SellCard key={data.id} data={data} />
+                ))}
+            </tbody>
+        </table>
       </StyledOrder>
     </StyledAllOrder>
   );
@@ -154,13 +180,37 @@ export function Ssbs() {
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
-        {ssbsBuy.map((data) => (
-          <BuyCard key={data.id} data={data} />
-        ))}
+        <table>
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Bid price</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {ssbsBuy.map((data) => (
+                <BuyCard key={data.id} data={data} />
+                ))}
+            </tbody>
+        </table>
       </StyledOrder>
       <StyledOrder>
         <p>Sell Orders</p>
-        <p>No data</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Offer price</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <p>No data</p>
+            </tbody>
+        </table>
       </StyledOrder>
     </StyledAllOrder>
   );
@@ -171,15 +221,39 @@ export function Ssgm() {
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
-        {ssgmBuy.map((data) => (
-          <BuyCard key={data.id} data={data} />
-        ))}
+        <table>
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Bid price</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {ssgmBuy.map((data) => (
+                <BuyCard key={data.id} data={data} />
+                ))}
+            </tbody>
+        </table>
       </StyledOrder>
       <StyledOrder>
         <p>Sell Orders</p>
-        {ssgmSell.map((data) => (
-          <SellCard key={data.id} data={data} />
-        ))}
+        <table>
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Offer price</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {ssgmSell.map((data) => (
+                <SellCard key={data.id} data={data} />
+                ))}
+            </tbody>
+        </table>
       </StyledOrder>
     </StyledAllOrder>
   );
@@ -189,15 +263,39 @@ export function Smaz() {
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
-        {smazBuy.map((data) => (
-          <BuyCard key={data.id} data={data} />
-        ))}
+        <table>
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Bid price</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {smazBuy.map((data) => (
+                <BuyCard key={data.id} data={data} />
+                ))}
+            </tbody>
+        </table>
       </StyledOrder>
       <StyledOrder>
         <p>Sell Orders</p>
-        {smazSell.map((data) => (
-          <SellCard key={data.id} data={data} />
-        ))}
+        <table>
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Offer price</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {smazSell.map((data) => (
+                <SellCard key={data.id} data={data} />
+                ))}
+            </tbody>
+        </table>
       </StyledOrder>
     </StyledAllOrder>
   );
@@ -208,11 +306,35 @@ export function Cexp() {
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
-        <p>No data</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Bid price</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <p>No data</p>
+            </tbody>
+        </table>
       </StyledOrder>
       <StyledOrder>
         <p>Sell Orders</p>
-        <p>No data</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Offer price</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <p>No data</p>
+            </tbody>
+        </table>
       </StyledOrder>
     </StyledAllOrder>
   );
@@ -223,15 +345,39 @@ export function Sprl() {
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
-        {sprlBuy.map((data) => (
-          <BuyCard key={data.id} data={data} />
-        ))}
+        <table>
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Bid price</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {sprlBuy.map((data) => (
+                <BuyCard key={data.id} data={data} />
+                ))}
+            </tbody>
+        </table>
       </StyledOrder>
       <StyledOrder>
         <p>Sell Orders</p>
-        {sprlSell.map((data) => (
-          <SellCard key={data.id} data={data} />
-        ))}
+        <table>
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Offer price</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {sprlSell.map((data) => (
+                <SellCard key={data.id} data={data} />
+                ))}
+            </tbody>
+        </table>
       </StyledOrder>
     </StyledAllOrder>
   );
@@ -242,15 +388,39 @@ export function Scoc() {
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
-        {scocBuy.map((data) => (
-          <BuyCard key={data.id} data={data} />
-        ))}
+        <table>
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Bid price</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {scocBuy.map((data) => (
+                <BuyCard key={data.id} data={data} />
+                ))}
+            </tbody>
+        </table>
       </StyledOrder>
       <StyledOrder>
         <p>Sell Orders</p>
-        {scocSell.map((data) => (
-          <SellCard key={data.id} data={data} />
-        ))}
+        <table>
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Offer price</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {scocSell.map((data) => (
+                <SellCard key={data.id} data={data} />
+                ))}
+            </tbody>
+        </table>
       </StyledOrder>
     </StyledAllOrder>
   );

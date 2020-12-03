@@ -53,13 +53,13 @@ export default function Order() {
             <p>Boards:</p>
             <div>
               <StyledNav to="/">all</StyledNav>
-              <StyledNav to="/fetc">fetc</StyledNav>
               <StyledNav to="/ssbs">ssbs</StyledNav>
               <StyledNav to="/ssgm">ssgm</StyledNav>
               <StyledNav to="/smaz">smaz</StyledNav>
               <StyledNav to="/cexp">cexp</StyledNav>
               <StyledNav to="/sprl">sprl</StyledNav>
               <StyledNav to="/scoc">scoc</StyledNav>
+              <StyledNav to="/fetc">fetc</StyledNav>
             </div>
           </InnerDiv>
         </StyledDiv>
@@ -79,13 +79,13 @@ export default function Order() {
 
       <>
         <Route exact path="/" component={All} />
-        <Route path="/fetc" component={Fetc} />
         <Route path="/ssbs" component={Ssbs} />
         <Route path="/ssgm" component={Ssgm} />
         <Route path="/smaz" component={Smaz} />
         <Route path="/cexp" component={Cexp} />
         <Route path="/sprl" component={Sprl} />
         <Route path="/scoc" component={Scoc} />
+        <Route path="/fetc" component={Fetc} />
       </>
     </StyledOverall>
   );
@@ -136,48 +136,6 @@ export function All() {
   );
 }
 
-export function Fetc() {
-  return (
-    <StyledAllOrder>
-      <StyledOrder>
-        <p>Buy Orders</p>
-        <StyledTable>
-            <thead>
-                <StyledRow>
-                    <th>Security</th>
-                    <th>Qty</th>
-                    <th>Bid price</th>
-                </StyledRow>
-            </thead>
-
-            <tbody>
-                {fetcBuy.map((data) => (
-                <BuyCard key={data.id} data={data} />
-                ))}
-            </tbody>
-        </StyledTable>
-      </StyledOrder>
-      <StyledOrder>
-        <p>Sell Orders</p>
-        <StyledTable>
-            <thead>
-                <StyledRow>
-                    <th>Security</th>
-                    <th>Qty</th>
-                    <th>Offer price</th>
-                </StyledRow>
-            </thead>
-            
-            <tbody>
-                {fetcSell.map((data) => (
-                <SellCard key={data.id} data={data} />
-                ))}
-            </tbody>
-        </StyledTable>
-      </StyledOrder>
-    </StyledAllOrder>
-  );
-}
 
 export function Ssbs() {
   return (
@@ -190,6 +148,7 @@ export function Ssbs() {
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Bid price</th>
+                    <th></th>
                 </StyledRow>
             </thead>
             
@@ -208,6 +167,7 @@ export function Ssbs() {
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Offer price</th>
+                    <th></th>
                 </StyledRow>
             </thead>
             
@@ -221,7 +181,7 @@ export function Ssbs() {
 }
 
 export function Ssgm() {
-  return (
+    return (
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
@@ -231,6 +191,7 @@ export function Ssgm() {
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Bid price</th>
+                    <th></th>
                 </StyledRow>
             </thead>
             
@@ -249,6 +210,7 @@ export function Ssgm() {
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Offer price</th>
+                    <th></th>
                 </StyledRow>
             </thead>
             
@@ -264,7 +226,7 @@ export function Ssgm() {
 }
 export function Smaz() {
   return (
-    <StyledAllOrder>
+      <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
         <StyledTable>
@@ -273,6 +235,7 @@ export function Smaz() {
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Bid price</th>
+                    <th></th>
                 </StyledRow>
             </thead>
             
@@ -291,6 +254,7 @@ export function Smaz() {
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Offer price</th>
+                    <th></th>
                 </StyledRow>
             </thead>
             
@@ -307,7 +271,7 @@ export function Smaz() {
 
 export function Cexp() {
   return (
-    <StyledAllOrder>
+      <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
         <StyledTable>
@@ -316,6 +280,7 @@ export function Cexp() {
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Bid price</th>
+                    <th></th>
                 </StyledRow>
             </thead>
             
@@ -332,6 +297,7 @@ export function Cexp() {
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Offer price</th>
+                    <th></th>
                 </StyledRow>
             </thead>
             
@@ -345,7 +311,7 @@ export function Cexp() {
 }
 
 export function Sprl() {
-  return (
+    return (
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
@@ -355,6 +321,7 @@ export function Sprl() {
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Bid price</th>
+                    <th></th>
                 </StyledRow>
             </thead>
             
@@ -373,6 +340,7 @@ export function Sprl() {
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Offer price</th>
+                    <th></th>
                 </StyledRow>
             </thead>
             
@@ -398,12 +366,13 @@ export function Scoc() {
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Bid price</th>
+                    <th></th>
                 </StyledRow>
             </thead>
             
             <tbody>
                 {scocBuy.map((data) => (
-                <BuyCard key={data.id} data={data} />
+                    <BuyCard key={data.id} data={data} />
                 ))}
             </tbody>
         </StyledTable>
@@ -416,6 +385,7 @@ export function Scoc() {
                     <th>Security</th>
                     <th>Qty</th>
                     <th>Offer price</th>
+                    <th></th>
                 </StyledRow>
             </thead>
             
@@ -428,4 +398,49 @@ export function Scoc() {
       </StyledOrder>
     </StyledAllOrder>
   );
+}
+
+export function Fetc() {
+    return (
+    <StyledAllOrder>
+        <StyledOrder>
+            <p>Buy Orders</p>
+            <StyledTable>
+                <thead>
+                    <StyledRow>
+                        <th>Security</th>
+                        <th>Qty</th>
+                        <th>Bid price</th>
+                        <th></th>
+                    </StyledRow>
+                </thead>
+
+                <tbody>
+                    {fetcBuy.map((data) => (
+                    <BuyCard key={data.id} data={data} />
+                    ))}
+                </tbody>
+            </StyledTable>
+        </StyledOrder>
+        <StyledOrder>
+            <p>Sell Orders</p>
+            <StyledTable>
+                <thead>
+                    <StyledRow>
+                        <th>Security</th>
+                        <th>Qty</th>
+                        <th>Offer price</th>
+                        <th></th>
+                    </StyledRow>
+                </thead>
+                
+                <tbody>
+                    {fetcSell.map((data) => (
+                    <SellCard key={data.id} data={data} />
+                    ))}
+                </tbody>
+            </StyledTable>
+        </StyledOrder>
+    </StyledAllOrder>
+    );
 }

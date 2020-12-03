@@ -45,6 +45,12 @@ export const StyledNav = styled(NavLink)`
     color: #51965e;
     background: #fff;
     text-transform: uppercase;
+    font-weight: 600;
+
+    &:focus {
+        color: #fff;
+        background: #51965e;
+    }
 `
 
 export const SelectCover = styled.div`
@@ -82,22 +88,33 @@ export const StyledOrder = styled.div`
     flex-direction: column;
     width: 45%;
     margin-top: 30px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     background: #fff;
     border-radius: 4px;
     box-shadow: 3px 5px 13px 5px rgba(82, 63, 105, 0.05);
+
+    p {
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 6px;
+    }
 `
 
 export const StyledTable = styled.table`
     display: flex;
     flex-direction: column;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    padding: 5px;
+    border-bottom: 0;
+    padding-bottom: 0;
 `
 
 export const StyledRow = styled.tr`
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #e8e8e8;
-    padding: 10px 6px;
+    padding: 10px 7px;
     text-align: left;
 
     th, td {
@@ -105,10 +122,10 @@ export const StyledRow = styled.tr`
     }
 
     td:first-child {
-        width: 30%;
+        width: 34%;
     }
 
     th:first-child {
-        width: 30%;
+        width: 34%;
     }
 `

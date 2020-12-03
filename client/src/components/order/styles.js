@@ -86,7 +86,7 @@ export const StyledAllOrder = styled.div`
 export const StyledOrder = styled.div`
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 46%;
     margin-top: 30px;
     padding: 10px 15px;
     background: #fff;
@@ -118,14 +118,19 @@ export const StyledRow = styled.tr`
     text-align: left;
 
     th, td {
-        width: 22%;
+        width: 21%;
     }
 
     td:first-child {
-        width: 34%;
+        width: 37%;
     }
 
     th:first-child {
-        width: 34%;
+        width: 37%;
     }
+`
+
+export const Disable = styled.td`
+    font-size: 12px;
+    opacity: 0.6;
 `

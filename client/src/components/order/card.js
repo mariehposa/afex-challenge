@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyledRow } from './styles';
+import { StyledRow, Disable } from './styles';
 
 export function BuyCard({data}) {
     return (
         <StyledRow>
             <td>{data.security}</td>
             <td>{data.qty}</td>
-            <td>{data.bidPrice}</td>
-            <td>No stock</td>
+            <td>#{data.bidPrice}</td>
+            <Disable>No stock</Disable>
         </StyledRow>
     )
 }
@@ -17,7 +17,7 @@ export function SellCard({data}) {
         <StyledRow>
             <td>{data.security}</td>
             <td>{data.qty}</td>
-            <td>{data.offerPrice}</td>
+            <td>#{data.offerPrice}</td>
             <td>data</td>
         </StyledRow>
     )

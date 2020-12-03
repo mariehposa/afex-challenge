@@ -173,7 +173,6 @@ export const NoDataStyle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid #e8e8e8;
     padding-bottom: 30px;
     padding-top: 50px;
 

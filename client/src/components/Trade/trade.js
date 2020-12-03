@@ -16,7 +16,7 @@ import {
   NoDataStyle
 } from "../order/styles";
 import envelope from "../../images/envelope.svg";
-import { TradeNav, StyledAllTrade } from "./styles";
+import { TradeNav, StyledAllTrade, StyledTradeTable, StyledTradeRow, StyleAllTrade } from "./styles";
 
 export default function Trade() {
   // const [length, setLength] = useState(3);
@@ -66,16 +66,58 @@ export function New() {
 
 export function Open() {
     return(
-        <div>
-            
-        </div>
+        <StyleAllTrade>
+            <StyledTradeTable>
+                <thead>
+                    <StyledTradeRow>
+                        <th>Transaction</th>
+                        <th>Security</th>
+                        <th>Units</th>
+                        <th>Matched Units</th>
+                        <th>Open Units</th>
+                        <th>Order Price</th>
+                        <th>Created</th>
+                        <th>Status</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </StyledTradeRow>
+                </thead>
+                
+                <tbody>
+                    <NoDataStyle>
+                        <img src={envelope} alt="no data" />
+                        <p>No data</p>
+                    </NoDataStyle>
+                </tbody>
+            </StyledTradeTable>
+        </StyleAllTrade>
     )
 }
 
 export function Closed() {
     return(
-        <div>
-            
-        </div>
+        <StyleAllTrade>
+            <StyledTradeTable>
+                <thead>
+                    <StyledTradeRow>
+                        <th>Transaction</th>
+                        <th>Security</th>
+                        <th>Units</th>
+                        <th>Order Price</th>
+                        <th>Created</th>
+                        <th>Matched</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                    </StyledTradeRow>
+                </thead>
+                
+                <tbody>
+                    <NoDataStyle>
+                        <img src={envelope} alt="no data" />
+                        <p>No data</p>
+                    </NoDataStyle>
+                </tbody>
+            </StyledTradeTable>
+        </StyleAllTrade>
     )
 }

@@ -1,4 +1,5 @@
 import Order from "./components/order/order";
+import Trade from "./components/trade/trade";
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
       <div className="left"></div>
       <div className="right">
         <Order />
+        <Trade />
       </div>
     </div>
   );

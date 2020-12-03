@@ -1,21 +1,5 @@
 import React, { useState } from "react";
 import { Route } from "react-router-dom";
-import { BuyCard, SellCard } from "./card";
-import {
-  allBuy,
-  allSell,
-  fetcBuy,
-  fetcSell,
-  scocBuy,
-  scocSell,
-  smazBuy,
-  smazSell,
-  sprlBuy,
-  sprlSell,
-  ssbsBuy,
-  ssgmSell,
-  ssgmBuy,
-} from "../../data/data";
 import {
   StyledOverall,
   StyledAll,
@@ -30,10 +14,10 @@ import {
   StyledTable,
   StyledRow,
   NoDataStyle
-} from "./styles";
+} from "../order/styles";
 import envelope from "../../images/envelope.svg";
 
-export default function Order() {
+export default function Trade() {
   // const [length, setLength] = useState(3);
   // console.log(allSell)
 
@@ -69,4 +53,28 @@ export default function Order() {
       </>
     </StyledOverall>
   );
+}
+
+export function New() {
+    return(
+        <div>
+
+        </div>
+    )
+}
+
+export function Open() {
+    return(
+        <div>
+            
+        </div>
+    )
+}
+
+export function Closed() {
+    return(
+        <div>
+            
+        </div>
+    )
 }

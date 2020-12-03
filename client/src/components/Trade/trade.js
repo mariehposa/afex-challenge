@@ -16,6 +16,7 @@ import {
   NoDataStyle
 } from "../order/styles";
 import envelope from "../../images/envelope.svg";
+import { TradeNav, StyledAllTrade } from "./styles";
 
 export default function Trade() {
   // const [length, setLength] = useState(3);
@@ -27,24 +28,24 @@ export default function Trade() {
 
   return (
     <StyledOverall>
-      <StyledAll>
-            <div>
-              <StyledNav to="/">New Trade</StyledNav>
-              <StyledNav to="/open">Open Trades</StyledNav>
-              <StyledNav to="/closed">Closed Trades</StyledNav>
-            </div>
+      <StyledAllTrade>
+        <div>
+            <TradeNav to="/">New Trade</TradeNav>
+            <TradeNav to="/open">Open Trades</TradeNav>
+            <TradeNav to="/closed">Closed Trades</TradeNav>
+        </div>
 
         <SelectCover>
           <StyledSelect>
             <option value="5">5</option>
             <option value="10">10</option>
             <option value="20">20</option>
-            <option value="20">30</option>
-            <option value="20">50</option>
-            <option value="20">100</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
           </StyledSelect>
         </SelectCover>
-      </StyledAll>
+      </StyledAllTrade>
 
       <>
         <Route exact path="/" component={New} />

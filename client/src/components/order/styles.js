@@ -112,16 +112,26 @@ export const StyledTable = styled.table`
     border: 1px solid #e8e8e8;
     border-radius: 4px;
     padding: 5px;
-    border-bottom: 0;
+    /* border-bottom: 0; */
     padding-bottom: 0;
+
+    thead {
+        tr {
+            border-bottom: 1px solid #e8e8e8 !important;
+        }
+    }
 `
 
 export const StyledRow = styled.tr`
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
     padding: 15px 7px;
     text-align: left;
+
+    :first-child {
+        border: none;
+    }
 
     &:hover {
         background-color: rgba(81, 150, 94, 0.2);

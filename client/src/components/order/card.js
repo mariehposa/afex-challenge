@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledRow, Disable } from './styles';
+import { StyledRow, Disable, BuyButton } from './styles';
 
 export function BuyCard({data}) {
     return (
@@ -7,7 +7,7 @@ export function BuyCard({data}) {
             <td>{data.security}</td>
             <td>{data.qty}</td>
             <td>#{data.bidPrice}</td>
-            <Disable>No stock</Disable>
+            <Disable>No Stock</Disable>
         </StyledRow>
     )
 }
@@ -18,7 +18,9 @@ export function SellCard({data}) {
             <td>{data.security}</td>
             <td>{data.qty}</td>
             <td>#{data.offerPrice}</td>
-            <td>data</td>
+            <td>
+                <BuyButton>Buy</BuyButton>
+            </td>
         </StyledRow>
     )
 }

@@ -114,8 +114,14 @@ export const StyledRow = styled.tr`
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #e8e8e8;
-    padding: 10px 7px;
+    padding: 15px 7px;
     text-align: left;
+
+    &:hover {
+        background-color: rgba(81, 150, 94, 0.2);
+        /* opacity: 0.5; */
+        transition: background-color .4s ease-in;
+    }
 
     th, td {
         width: 21%;
@@ -133,4 +139,16 @@ export const StyledRow = styled.tr`
 export const Disable = styled.td`
     font-size: 12px;
     opacity: 0.6;
+`
+
+export const BuyButton = styled.button`
+    padding: 6px 10px;
+    border: 1px solid #51965e;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    background: #51965e;
+    margin-left: 30px;
+    text-align: center;
 `

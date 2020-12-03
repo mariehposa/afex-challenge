@@ -158,3 +158,18 @@ export const BuyButton = styled.button`
     margin-left: 30px;
     text-align: center;
 `
+
+export const NoDataStyle = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 30px;
+    padding-top: 50px;
+
+    p {
+        font-weight: 100;
+        font-size: 14px;
+        opacity: .5;
+    }
+`

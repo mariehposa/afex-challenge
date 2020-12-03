@@ -81,17 +81,23 @@ export const StyledFNav = styled(NavLink)`
 export const StyledAllOrder = styled.div`
     display: flex;
     justify-content: space-between;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 3px 5px 13px 5px rgba(82,63,105,0.05);
 `
 
 export const StyledOrder = styled.div`
     display: flex;
     flex-direction: column;
     width: 46%;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     padding: 10px 15px;
     background: #fff;
     border-radius: 4px;
     box-shadow: 3px 5px 13px 5px rgba(82, 63, 105, 0.05);
+    padding-bottom: 30px;
 
     p {
         font-weight: 600;

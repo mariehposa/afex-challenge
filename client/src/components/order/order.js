@@ -28,8 +28,10 @@ import {
   StyledOrder,
   StyledAllOrder,
   StyledTable,
-  StyledRow
+  StyledRow,
+  NoDataStyle
 } from "./styles";
+import envelope from "../../images/envelope.svg";
 
 export default function Order() {
   // const [length, setLength] = useState(3);
@@ -172,7 +174,10 @@ export function Ssbs() {
             </thead>
             
             <tbody>
-                <p>No data</p>
+                <NoDataStyle>
+                    <img src={envelope} alt="no data" />
+                    <p>No data</p>
+                </NoDataStyle>
             </tbody>
         </StyledTable>
       </StyledOrder>
@@ -285,7 +290,10 @@ export function Cexp() {
             </thead>
             
             <tbody>
-                <p>No data</p>
+                <NoDataStyle>
+                    <img src={envelope} alt="no data" />
+                    <p>No data</p>
+                </NoDataStyle>
             </tbody>
         </StyledTable>
       </StyledOrder>
@@ -302,7 +310,10 @@ export function Cexp() {
             </thead>
             
             <tbody>
-                <p>No data</p>
+                <NoDataStyle>
+                    <img src={envelope} alt="no data" />
+                    <p>No data</p>
+                </NoDataStyle>
             </tbody>
         </StyledTable>
       </StyledOrder>

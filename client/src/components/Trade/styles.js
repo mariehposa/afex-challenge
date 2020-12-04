@@ -82,14 +82,36 @@ export const StyleAllTrade = styled.div`
     box-shadow: 3px 5px 13px 5px rgba(82,63,105,0.05);
 `
 
+export const StyledNew = styled.div`
+    display: flex;
+
+    button {
+        border-color: #e1261c;
+        background-color: #e1261c;
+        color: #fff;
+        margin: 0 5px;
+        padding: 6px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        height: 30px;
+        border: none;
+        font-size: 14px;
+    }
+
+    p {
+        font-weight: 300;
+    }
+`
+
+export const StyledP = styled.p `
+    color: #e1261c;
+    font-weight: 600;
+`
+
 export const StyledTradeSelect = styled.select`
     width: 200px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #d9d9d9;
     color: #000;
-`
-
-export const StyledNew = styled.div`
-    display: flex;
 `

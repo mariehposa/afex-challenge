@@ -15,6 +15,7 @@ import {
   StyleAllTrade,
   StyledTradeSelect,
   StyledNew,
+  StyledP
 } from "./styles";
 
 export default function Trade() {
@@ -60,9 +61,9 @@ export function New() {
         <StyleAllTrade>
             <StyledNew>
                 <button>Buy</button>
-                <button>sell</button>
+                <button>Sell</button>
                 <p>for</p>
-                <p>Spot</p>
+                <StyledP>Spot</StyledP>
             </StyledNew>
             <SelectCover>
                 <StyledTradeSelect>

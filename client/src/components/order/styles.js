@@ -182,3 +182,24 @@ export const NoDataStyle = styled.div`
         opacity: .5;
     }
 `
+
+export const FancyButton = styled.button`
+  margin: 0 5px;
+  /* padding: 5px 10px; */
+  border: 1px solid #51965e;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #51965e;
+  /* height: 25px; */
+  background: #fff;
+  text-transform: uppercase;
+  font-weight: 400;  
+  
+  ${({ active }) =>
+    active &&
+    `
+    color: #fff;
+    background: #51965e;
+  `}
+`;

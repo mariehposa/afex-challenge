@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { Route } from "react-router-dom";
-import {
-  StyledOverall,
-  StyledSelect,
-  SelectCover,
-  NoDataStyle
-} from "../order/styles";
+import { StyledOverall, StyledSelect, SelectCover, NoDataStyle } from "../order/styles";
 import envelope from "../../images/envelope.svg";
+import BuyOrder from './buy_order'
 import {
   TradeNav,
   StyledAllTrade,
@@ -48,11 +44,12 @@ export default function Trade() {
         </SelectCover>
       </StyledAllTrade>
 
-      <>
+      {/* <>
         <Route exact path="/" component={New} />
         <Route path="/open" component={Open} />
         <Route path="/closed" component={Closed} />
-      </>
+      </> */}
+      <BuyOrder />
     </StyledOverall>
   );
 }

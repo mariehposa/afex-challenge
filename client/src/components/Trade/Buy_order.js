@@ -1,14 +1,20 @@
 import React from 'react';
+import { StyledBuyOrder, FirstDiv, SecondDiv, ThirdDiv, Coverall } from "./styles";
+import refresh from "../../images/refresh.svg";
 
 export default function BuyOrder() {
     return (
-        <div>
-            <div>
-                <p>Buy Order for FETC</p>
-                <button>Start Again</button>
-            </div>
-            
-            <div>
+        <StyledBuyOrder>
+            <Coverall>
+            <FirstDiv>
+                <p>Buy <span>Order for</span> FETC</p>
+                <button>
+                    <img src={refresh}/>
+                    Start Again
+                </button>
+            </FirstDiv>
+
+            <SecondDiv>
                 <div>
                     <p>Location</p>
                     <select disabled>
@@ -45,12 +51,13 @@ export default function BuyOrder() {
                     </div>
                     <p>Estimated Value: #10,000.00</p>
                 </div>
-            </div>
+            </SecondDiv>
 
-            <div>
+            <ThirdDiv>
                 <button>Cancel</button>
                 <button>Confirm</button>
-            </div>
-        </div>
+            </ThirdDiv>
+            </Coverall>
+        </StyledBuyOrder>
     )
 } 

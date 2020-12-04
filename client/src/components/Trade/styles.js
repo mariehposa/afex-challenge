@@ -130,3 +130,55 @@ export const SelectTradeCover = styled.div`
     margin-top: 20px;
     margin-left: 2rem;
 `
+
+export const StyledBuyOrder = styled.div`
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding-bottom: 30px;
+    box-shadow: 3px 5px 13px 5px rgba(82,63,105,0.05);
+`
+export const Coverall = styled.div`
+    width: 60%;
+    align-self: center;
+    margin-top: 30px;
+`
+
+export const FirstDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+
+    p {
+        color: #e1261c;
+        font-weight: 600
+    }
+
+    span {
+        color: rgba(0,0,0,.65);
+        font-weight: 300
+    }
+
+    button {
+        background: #fff;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        color: rgba(0,0,0,.65);
+        height: 10vh;
+    }
+
+    img {
+        width: 30px;
+    }
+`
+
+export const SecondDiv = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`
+
+export const ThirdDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+`

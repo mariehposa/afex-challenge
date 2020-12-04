@@ -2,7 +2,7 @@ import React from 'react';
 import { StyledBuyOrder, FirstDiv, SecondDiv, ThirdDiv, Coverall, StyledPrice } from "./styles";
 import refresh from "../../images/refresh.svg";
 
-export default function BuyOrder({data}) {
+export default function BuyOrderCard({data}) {
     return (
         <StyledBuyOrder>
             <Coverall>

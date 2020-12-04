@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, useHistory } from "react-router-dom";
 import { StyleAllTrade, StyledTradeSelect, StyledNew, StyledP, SelectTradeCover } from "./styles";
 import { fetc, ssbs, ssgm, smaz, cexp, sprl, scoc } from "../../data/buy_order";
@@ -19,7 +19,7 @@ export default function New() {
     )
 }
 
-function BaseComponent(){
+function BaseComponent() {
     const options = [
         { name: 'Select Commodity', value: null },
         { name: 'Fair Trade ETC FETC', value: 'fetc' },
@@ -31,29 +31,32 @@ function BaseComponent(){
         { name: 'Cocoa SCOC', value: 'scoc' }
     ]
 
+    const [opt, setOpt] = useState(options)
+
     const history = useHistory();
     const handleChange = (event) => {
         const val = event.target.value;
         history.push(`/trade/${val}`)
     };
     
-    return ( <StyleAllTrade>
-        <StyledNew>
-            <button>Buy</button>
-            <button>Sell</button>
-            <p>for</p>
-            <StyledP>Spot</StyledP>
-        </StyledNew>
-        <SelectTradeCover>
-            <StyledTradeSelect onChange={handleChange}>
-                {options.map(item => (
-                    <option key={item.value} value={item.value}>
-                    {item.name}
-                    </option>
-                ))}
-            </StyledTradeSelect>
-        </SelectTradeCover>
-    </StyleAllTrade>
+    return ( 
+        <StyleAllTrade>
+            <StyledNew>
+                <button onClick={() => setOpt(options)}>Buy</button>
+                <button onClick={() => setOpt([{name: 'No Commodities available', value: null}])}>Sell</button>
+                <p>for</p>
+                <StyledP>Spot</StyledP>
+            </StyledNew>
+            <SelectTradeCover>
+                <StyledTradeSelect onChange={handleChange}>
+                    {opt.map(item => (
+                        <option key={item.value} value={item.value}>
+                        {item.name}
+                        </option>
+                    ))}
+                </StyledTradeSelect>
+            </SelectTradeCover>
+        </StyleAllTrade>
     )
 }
 

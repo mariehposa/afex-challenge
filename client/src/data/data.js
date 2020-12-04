@@ -59,6 +59,6 @@ export const scocSell = [
     {id: 28, security: 'SCOC(Cocoa)', qty: 247.00, offerPrice: 96000.00}
 ]
 
-export const allBuy = fetcBuy.concat(ssbsBuy, ssgmBuy, smazBuy, sprlBuy, scocBuy)
+export const allBuy = [ ...fetcBuy, ...ssbsBuy, ...ssgmBuy, ...smazBuy, ...sprlBuy, ...scocBuy, ];
 
-export const allSell = fetcSell.concat(ssgmSell, smazSell, sprlSell, scocSell)
+export const allSell = [ ...fetcSell, ...ssgmSell, ...smazSell, ...sprlSell, ...scocSell, ];

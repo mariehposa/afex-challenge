@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
 
 export const StyledOverall = styled.div`
     display: flex;
@@ -23,7 +22,6 @@ export const StyledDiv = styled.div`
 
 export const InnerDiv = styled.div`
     display: flex;
-    /* margin-top: 10px; */
 
     div {
         margin-left: 10px;
@@ -32,24 +30,6 @@ export const InnerDiv = styled.div`
 
     p {
         font-weight: bold;
-    }
-`
-
-export const StyledNav = styled(NavLink)`
-    margin: 0 5px;
-    padding: 5px 10px;
-    border: 1px solid #51965e;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    color: #51965e;
-    background: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-
-    &:focus {
-        color: #fff;
-        background: #51965e;
     }
 `
 
@@ -66,8 +46,8 @@ export const StyledSelect = styled.select`
     color: #d9d9d9;
 `
 
-export const StyledFNav = styled(NavLink)`
-    border-color: #e1261c;
+export const DangerButton = styled.button`
+    border: 1px solid #e1261c;
     background-color: #e1261c;
     color: #fff;
     margin: 0 5px;
@@ -75,7 +55,7 @@ export const StyledFNav = styled(NavLink)`
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
 `
 
 export const StyledAllOrder = styled.div`
@@ -92,7 +72,6 @@ export const StyledOrder = styled.div`
     display: flex;
     flex-direction: column;
     width: 46%;
-    /* margin-top: 30px; */
     padding: 10px 15px;
     background: #fff;
     border-radius: 4px;
@@ -112,7 +91,6 @@ export const StyledTable = styled.table`
     border: 1px solid #e8e8e8;
     border-radius: 4px;
     padding: 5px;
-    /* border-bottom: 0; */
     padding-bottom: 0;
 
     thead {
@@ -135,7 +113,6 @@ export const StyledRow = styled.tr`
 
     &:hover {
         background-color: rgba(81, 150, 94, 0.2);
-        /* opacity: 0.5; */
         transition: background-color .4s ease-in;
     }
 
@@ -184,22 +161,21 @@ export const NoDataStyle = styled.div`
 `
 
 export const FancyButton = styled.button`
-  margin: 0 5px;
-  /* padding: 5px 10px; */
-  border: 1px solid #51965e;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  color: #51965e;
-  /* height: 25px; */
-  background: #fff;
-  text-transform: uppercase;
-  font-weight: 400;  
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #51965e;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #51965e;
+    background: #fff;
+    text-transform: uppercase;
+
   
-  ${({ active }) =>
-    active &&
-    `
-    color: #fff;
-    background: #51965e;
-  `}
+    ${({ active }) =>
+        active &&
+        `
+        color: #fff;
+        background: #51965e;
+    `}
 `;

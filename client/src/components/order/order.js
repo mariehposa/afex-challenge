@@ -1,35 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Route } from "react-router-dom";
 import { BuyCard, SellCard } from "./card";
-import {
-  allBuy,
-  allSell,
-  fetcBuy,
-  fetcSell,
-  scocBuy,
-  scocSell,
-  smazBuy,
-  smazSell,
-  sprlBuy,
-  sprlSell,
-  ssbsBuy,
-  ssgmSell,
-  ssgmBuy,
-} from "../../data/data";
+import { allBuy, allSell, } from "../../data/data";
 import {
   StyledOverall,
   StyledAll,
   StyledDiv,
-  StyledNav,
   StyledSelect,
   InnerDiv,
   SelectCover,
-  StyledFNav,
   StyledOrder,
   StyledAllOrder,
   StyledTable,
   StyledRow,
   NoDataStyle,
+  DangerButton,
 } from "./styles";
 import envelope from "../../images/envelope.svg";
 import OptionButtons from "../custom/optionButton";
@@ -38,7 +22,9 @@ export default function Order() {
   const [limit, setLimit] = useState(3);
   const [data, setData] = useState(allBuy);
   const [sellData, setSellData] = useState(allSell);
-  const [toggles, setToggles] = useState([]);  useEffect(() => {
+  const [toggles, setToggles] = useState([]);  
+  
+  useEffect(() => {
     var a = [];
     var b = [];
     if (toggles.length > 0) {
@@ -46,7 +32,8 @@ export default function Order() {
         const c = allBuy.filter((dataItem) =>
           dataItem.security.toLowerCase().includes(t)
         );
-        a = a.concat(c);        const d = allSell.filter((dataItem) =>
+        a = a.concat(c);        
+        const d = allSell.filter((dataItem) =>
           dataItem.security.toLowerCase().includes(t)
         );
         b = b.concat(d);
@@ -66,7 +53,7 @@ export default function Order() {
           <InnerDiv>
             <p>Market:</p>
             <div>
-              <StyledFNav to="/">Spot</StyledFNav>
+              <DangerButton onClick={() => setToggles([])}>Spot</DangerButton>
             </div>
           </InnerDiv>
           <InnerDiv>
@@ -89,7 +76,8 @@ export default function Order() {
                     setToggles(a);
                   } else {
                     setToggles(toggles.concat(selected));
-                  }                  if (selected == "all") {
+                  }                  
+                  if (selected == "all") {
                     setToggles([]);
                   }
                 }}

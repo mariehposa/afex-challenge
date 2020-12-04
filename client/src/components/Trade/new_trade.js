@@ -9,22 +9,12 @@ export default function New() {
         <>
             <Route exact path={["/", "/trade"]} component={BaseComponent} />
             <Route path="/trade/fetc" component={Fetc} />
-            {/* <Route path="/trade/ssbs" component={Ssbs} />
+            <Route path="/trade/ssbs" component={Ssbs} />
             <Route path="/trade/ssgm" component={Ssgm} />
             <Route path="/trade/smaz" component={Smaz} />
             <Route path="/trade/cexp" component={Cexp} />
             <Route path="/trade/sprl" component={Sprl} />
-            <Route path="/trade/scoc" component={Scoc} /> */}
-        </>
-    )
-}
-
-export function Fetc() {
-    return (
-        <>
-            {
-                fetc.map(data => (<BuyOrderCard key={data.id} data={data} />))
-            }
+            <Route path="/trade/scoc" component={Scoc} />
         </>
     )
 }
@@ -64,5 +54,75 @@ function BaseComponent(){
             </StyledTradeSelect>
         </SelectTradeCover>
     </StyleAllTrade>
+    )
+}
+
+export function Fetc() {
+    return (
+        <>
+            {
+                fetc.map(data => (<BuyOrderCard key={data.id} data={data} />))
+            }
+        </>
+    )
+}
+
+export function Ssbs() {
+    return (
+        <>
+            {
+                ssbs.map(data => (<BuyOrderCard key={data.id} data={data} />))
+            }
+        </>
+    )
+}
+
+export function Ssgm() {
+    return (
+        <>
+            {
+                ssgm.map(data => (<BuyOrderCard key={data.id} data={data} />))
+            }
+        </>
+    )
+}
+
+export function Smaz() {
+    return (
+        <>
+            {
+                smaz.map(data => (<BuyOrderCard key={data.id} data={data} />))
+            }
+        </>
+    )
+}
+
+export function Cexp() {
+    return (
+        <>
+            {
+                cexp.map(data => (<BuyOrderCard key={data.id} data={data} />))
+            }
+        </>
+    )
+}
+
+export function Sprl() {
+    return (
+        <>
+            {
+                sprl.map(data => (<BuyOrderCard key={data.id} data={data} />))
+            }
+        </>
+    )
+}
+
+export function Scoc() {
+    return (
+        <>
+            {
+                scoc.map(data => (<BuyOrderCard key={data.id} data={data} />))
+            }
+        </>
     )
 }

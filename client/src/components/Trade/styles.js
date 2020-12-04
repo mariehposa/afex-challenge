@@ -191,10 +191,12 @@ export const SecondDiv = styled.div`
 
     input {
         width: 230px !important;
+        background: #fff;
     }
 
     span {
         font-weight: 600;
+        color: #000;
     }
 `
 

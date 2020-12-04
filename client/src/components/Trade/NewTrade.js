@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Route, useHistory } from "react-router-dom";
 import { StyleAllTrade, StyledTradeSelect, StyledNew, StyledP, SelectTradeCover } from "./styles";
 import { fetc, ssbs, ssgm, smaz, cexp, sprl, scoc } from "../../data/buy_order";
-import BuyOrderCard from './buy_order';
+import BuyOrderCard from './BuyOrder';
 
 export default function New() {
     return(       

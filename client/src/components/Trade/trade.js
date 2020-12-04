@@ -2,7 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { StyledOverall, StyledSelect, SelectCover } from "../order/styles";
 import { TradeNav, StyledAllTrade } from "./styles";
-import New from './new_trade';
+import New from './NewTrade';
 import Open from './open_trade';
 import Closed from './closed_trade';
 

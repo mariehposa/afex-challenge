@@ -100,7 +100,13 @@ export default function Order() {
         </StyledDiv>
 
         <SelectCover>
-          <StyledSelect>
+          <StyledSelect
+              onChange={(event) => {
+                const value = parseInt(event.target.value);
+                setLimit(value);
+              }}
+              value={limit}
+            >
             <option value="3">3</option>
             <option value="5">5</option>
             <option value="10">10</option>
@@ -112,22 +118,6 @@ export default function Order() {
         </SelectCover>
       </StyledAll>
 
-      <>
-        <Route exact path="/" component={All} />
-        <Route path="/ssbs" component={Ssbs} />
-        <Route path="/ssgm" component={Ssgm} />
-        <Route path="/smaz" component={Smaz} />
-        <Route path="/cexp" component={Cexp} />
-        <Route path="/sprl" component={Sprl} />
-        <Route path="/scoc" component={Scoc} />
-        <Route path="/fetc" component={Fetc} />
-      </>
-    </StyledOverall>
-  );
-}
-
-export function All() {
-  return (
     <StyledAllOrder>
       <StyledOrder>
         <p>Buy Orders</p>
@@ -141,6 +131,62 @@ export function All() {
                 </StyledRow>
             </thead>
 
+            <tbody>
+                {data.length > 0 ? (
+                    data.map((data) => <BuyCard key={data.id} data={data} />)
+                  ) : (
+                <NoDataStyle>
+                    <img src={envelope} alt="no data" />
+                    <p>No data</p>
+                </NoDataStyle>
+                )}
+            </tbody>
+        </StyledTable>
+      </StyledOrder>
+      <StyledOrder>
+        <p>Sell Orders</p>
+        <StyledTable>
+            <thead>
+                <StyledRow>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Offer price</th>
+                    <th></th>
+                </StyledRow>
+            </thead>
+            
+            <tbody>
+                {sellData.length > 0 ? (
+                    sellData.map((data) => <SellCard key={data.id} data={data} />)
+                  ) : (
+                <NoDataStyle>
+                    <img src={envelope} alt="no data" />
+                    <p>No data</p>
+                </NoDataStyle>
+                )}
+            </tbody>
+        </StyledTable>
+      </StyledOrder>
+    </StyledAllOrder>
+    </StyledOverall>
+  );
+}
+
+export function All() {
+    return (
+    <StyledAllOrder>
+      <StyledOrder>
+        <p>Buy Orders</p>
+        <StyledTable>
+            <thead>
+                <StyledRow>
+                    <th>Security</th>
+                    <th>Qty</th>
+                    <th>Bid price</th>
+                    <th></th>
+                </StyledRow>
+            </thead>
+            
             <tbody>
                 {allBuy.map((data) => (
                 <BuyCard key={data.id} data={data} />
@@ -159,331 +205,14 @@ export function All() {
                     <th></th>
                 </StyledRow>
             </thead>
-
+                
             <tbody>
                 {allSell.map((data) => (
                 <SellCard key={data.id} data={data} />
                 ))}
             </tbody>
-        </StyledTable>
-      </StyledOrder>
-    </StyledAllOrder>
-  );
-}
-
-export function Ssbs() {
-  return (
-    <StyledAllOrder>
-      <StyledOrder>
-        <p>Buy Orders</p>
-        <StyledTable>
-            <thead>
-                <StyledRow>
-                    <th>Security</th>
-                    <th>Qty</th>
-                    <th>Bid price</th>
-                    <th></th>
-                </StyledRow>
-            </thead>
-            
-            <tbody>
-                {ssbsBuy.map((data) => (
-                <BuyCard key={data.id} data={data} />
-                ))}
-            </tbody>
-        </StyledTable>
-      </StyledOrder>
-      <StyledOrder>
-        <p>Sell Orders</p>
-        <StyledTable>
-            <thead>
-                <StyledRow>
-                    <th>Security</th>
-                    <th>Qty</th>
-                    <th>Offer price</th>
-                    <th></th>
-                </StyledRow>
-            </thead>
-            
-            <tbody>
-                <NoDataStyle>
-                    <img src={envelope} alt="no data" />
-                    <p>No data</p>
-                </NoDataStyle>
-            </tbody>
-        </StyledTable>
-      </StyledOrder>
-    </StyledAllOrder>
-  );
-}
-
-export function Ssgm() {
-    return (
-    <StyledAllOrder>
-      <StyledOrder>
-        <p>Buy Orders</p>
-        <StyledTable>
-            <thead>
-                <StyledRow>
-                    <th>Security</th>
-                    <th>Qty</th>
-                    <th>Bid price</th>
-                    <th></th>
-                </StyledRow>
-            </thead>
-            
-            <tbody>
-                {ssgmBuy.map((data) => (
-                <BuyCard key={data.id} data={data} />
-                ))}
-            </tbody>
-        </StyledTable>
-      </StyledOrder>
-      <StyledOrder>
-        <p>Sell Orders</p>
-        <StyledTable>
-            <thead>
-                <StyledRow>
-                    <th>Security</th>
-                    <th>Qty</th>
-                    <th>Offer price</th>
-                    <th></th>
-                </StyledRow>
-            </thead>
-            
-            <tbody>
-                {ssgmSell.map((data) => (
-                <SellCard key={data.id} data={data} />
-                ))}
-            </tbody>
-        </StyledTable>
-      </StyledOrder>
-    </StyledAllOrder>
-  );
-}
-export function Smaz() {
-  return (
-      <StyledAllOrder>
-      <StyledOrder>
-        <p>Buy Orders</p>
-        <StyledTable>
-            <thead>
-                <StyledRow>
-                    <th>Security</th>
-                    <th>Qty</th>
-                    <th>Bid price</th>
-                    <th></th>
-                </StyledRow>
-            </thead>
-            
-            <tbody>
-                {smazBuy.map((data) => (
-                <BuyCard key={data.id} data={data} />
-                ))}
-            </tbody>
-        </StyledTable>
-      </StyledOrder>
-      <StyledOrder>
-        <p>Sell Orders</p>
-        <StyledTable>
-            <thead>
-                <StyledRow>
-                    <th>Security</th>
-                    <th>Qty</th>
-                    <th>Offer price</th>
-                    <th></th>
-                </StyledRow>
-            </thead>
-            
-            <tbody>
-                {smazSell.map((data) => (
-                <SellCard key={data.id} data={data} />
-                ))}
-            </tbody>
-        </StyledTable>
-      </StyledOrder>
-    </StyledAllOrder>
-  );
-}
-
-export function Cexp() {
-  return (
-      <StyledAllOrder>
-      <StyledOrder>
-        <p>Buy Orders</p>
-        <StyledTable>
-            <thead>
-                <StyledRow>
-                    <th>Security</th>
-                    <th>Qty</th>
-                    <th>Bid price</th>
-                    <th></th>
-                </StyledRow>
-            </thead>
-            
-            <tbody>
-                <NoDataStyle>
-                    <img src={envelope} alt="no data" />
-                    <p>No data</p>
-                </NoDataStyle>
-            </tbody>
-        </StyledTable>
-      </StyledOrder>
-      <StyledOrder>
-        <p>Sell Orders</p>
-        <StyledTable>
-            <thead>
-                <StyledRow>
-                    <th>Security</th>
-                    <th>Qty</th>
-                    <th>Offer price</th>
-                    <th></th>
-                </StyledRow>
-            </thead>
-            
-            <tbody>
-                <NoDataStyle>
-                    <img src={envelope} alt="no data" />
-                    <p>No data</p>
-                </NoDataStyle>
-            </tbody>
-        </StyledTable>
-      </StyledOrder>
-    </StyledAllOrder>
-  );
-}
-
-export function Sprl() {
-    return (
-    <StyledAllOrder>
-      <StyledOrder>
-        <p>Buy Orders</p>
-        <StyledTable>
-            <thead>
-                <StyledRow>
-                    <th>Security</th>
-                    <th>Qty</th>
-                    <th>Bid price</th>
-                    <th></th>
-                </StyledRow>
-            </thead>
-            
-            <tbody>
-                {sprlBuy.map((data) => (
-                <BuyCard key={data.id} data={data} />
-                ))}
-            </tbody>
-        </StyledTable>
-      </StyledOrder>
-      <StyledOrder>
-        <p>Sell Orders</p>
-        <StyledTable>
-            <thead>
-                <StyledRow>
-                    <th>Security</th>
-                    <th>Qty</th>
-                    <th>Offer price</th>
-                    <th></th>
-                </StyledRow>
-            </thead>
-            
-            <tbody>
-                {sprlSell.map((data) => (
-                <SellCard key={data.id} data={data} />
-                ))}
-            </tbody>
-        </StyledTable>
-      </StyledOrder>
-    </StyledAllOrder>
-  );
-}
-
-export function Scoc() {
-  return (
-    <StyledAllOrder>
-      <StyledOrder>
-        <p>Buy Orders</p>
-        <StyledTable>
-            <thead>
-                <StyledRow>
-                    <th>Security</th>
-                    <th>Qty</th>
-                    <th>Bid price</th>
-                    <th></th>
-                </StyledRow>
-            </thead>
-            
-            <tbody>
-                {scocBuy.map((data) => (
-                    <BuyCard key={data.id} data={data} />
-                ))}
-            </tbody>
-        </StyledTable>
-      </StyledOrder>
-      <StyledOrder>
-        <p>Sell Orders</p>
-        <StyledTable>
-            <thead>
-                <StyledRow>
-                    <th>Security</th>
-                    <th>Qty</th>
-                    <th>Offer price</th>
-                    <th></th>
-                </StyledRow>
-            </thead>
-            
-            <tbody>
-                {scocSell.map((data) => (
-                <SellCard key={data.id} data={data} />
-                ))}
-            </tbody>
-        </StyledTable>
-      </StyledOrder>
-    </StyledAllOrder>
-  );
-}
-
-export function Fetc() {
-    return (
-    <StyledAllOrder>
-        <StyledOrder>
-            <p>Buy Orders</p>
-            <StyledTable>
-                <thead>
-                    <StyledRow>
-                        <th>Security</th>
-                        <th>Qty</th>
-                        <th>Bid price</th>
-                        <th></th>
-                    </StyledRow>
-                </thead>
-
-                <tbody>
-                    {fetcBuy.map((data) => (
-                    <BuyCard key={data.id} data={data} />
-                    ))}
-                </tbody>
-            </StyledTable>
-        </StyledOrder>
-        <StyledOrder>
-            <p>Sell Orders</p>
-            <StyledTable>
-                <thead>
-                    <StyledRow>
-                        <th>Security</th>
-                        <th>Qty</th>
-                        <th>Offer price</th>
-                        <th></th>
-                    </StyledRow>
-                </thead>
-                
-                <tbody>
-                    {fetcSell.map((data) => (
-                    <SellCard key={data.id} data={data} />
-                    ))}
-                </tbody>
-            </StyledTable>
+          </StyledTable>
         </StyledOrder>
     </StyledAllOrder>
-    );
+  );
 }

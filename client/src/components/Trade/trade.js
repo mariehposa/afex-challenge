@@ -1,21 +1,10 @@
-import React, { useState } from "react";
-import { Route, useHistory } from "react-router-dom";
-import { StyledOverall, StyledSelect, SelectCover, NoDataStyle } from "../order/styles";
-import envelope from "../../images/envelope.svg";
-import BuyOrder from './buy_order'
-import {
-  TradeNav,
-  StyledAllTrade,
-  StyledTradeTable,
-  StyledTradeRow,
-  StyleAllTrade,
-  StyledTradeSelect,
-  StyledNew,
-  StyledP,
-  SelectTradeCover
-} from "./styles";
+import React from "react";
+import { Route } from "react-router-dom";
+import { StyledOverall, StyledSelect, SelectCover } from "../order/styles";
+import { TradeNav, StyledAllTrade } from "./styles";
 import New from './new_trade';
 import Open from './new_trade';
+import Closed from './closed_trade';
 
 export default function Trade() {
   return (
@@ -44,35 +33,6 @@ export default function Trade() {
         <Route path="/open" component={Open} />
         <Route path="/closed" component={Closed} />
       </>
-      {/* <BuyOrder /> */}
     </StyledOverall>
   );
-}
-
-export function Closed() {
-    return(
-        <StyleAllTrade>
-            <StyledTradeTable>
-                <thead>
-                    <StyledTradeRow>
-                        <th>Transaction</th>
-                        <th>Security</th>
-                        <th>Units</th>
-                        <th>Order Price</th>
-                        <th>Created</th>
-                        <th>Matched</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                    </StyledTradeRow>
-                </thead>
-                
-                <tbody>
-                    <NoDataStyle>
-                        <img src={envelope} alt="no data" />
-                        <p>No data</p>
-                    </NoDataStyle>
-                </tbody>
-            </StyledTradeTable>
-        </StyleAllTrade>
-    )
 }

@@ -1,12 +1,6 @@
 import React from "react";
 import { Route, useHistory } from "react-router-dom";
-import {
-  StyleAllTrade,
-  StyledTradeSelect,
-  StyledNew,
-  StyledP,
-  SelectTradeCover
-} from "./styles";
+import { StyleAllTrade, StyledTradeSelect, StyledNew, StyledP, SelectTradeCover } from "./styles";
 
 export default function New() {
     const options = [

@@ -3,7 +3,7 @@ import { NoDataStyle } from "../order/styles";
 import envelope from "../../images/envelope.svg";
 import { StyledTradeTable, StyledTradeRow, StyleAllTrade } from "./styles";
 
-export function Open() {
+export default function Closed() {
     return(
         <StyleAllTrade>
             <StyledTradeTable>
@@ -12,13 +12,11 @@ export function Open() {
                         <th>Transaction</th>
                         <th>Security</th>
                         <th>Units</th>
-                        <th>Matched Units</th>
-                        <th>Open Units</th>
                         <th>Order Price</th>
                         <th>Created</th>
-                        <th>Status</th>
+                        <th>Matched</th>
                         <th>Type</th>
-                        <th>Actions</th>
+                        <th>Status</th>
                     </StyledTradeRow>
                 </thead>
                 

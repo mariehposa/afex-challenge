@@ -3,7 +3,7 @@ import { NoDataStyle } from "../order/styles";
 import envelope from "../../images/envelope.svg";
 import { StyledTradeTable, StyledTradeRow, StyleAllTrade } from "./styles";
 
-export function Open() {
+export default function Open() {
     return(
         <StyleAllTrade>
             <StyledTradeTable>

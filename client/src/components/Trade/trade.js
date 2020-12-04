@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import { StyledOverall, StyledSelect, SelectCover } from "../order/styles";
 import { TradeNav, StyledAllTrade } from "./styles";
 import New from './new_trade';
-import Open from './new_trade';
+import Open from './open_trade';
 import Closed from './closed_trade';
 
 export default function Trade() {
@@ -11,7 +11,7 @@ export default function Trade() {
     <StyledOverall>
       <StyledAllTrade>
         <div>
-            <TradeNav to="/">New Trade</TradeNav>
+            <TradeNav to="/trade">New Trade</TradeNav>
             <TradeNav to="/open">Open Trades</TradeNav>
             <TradeNav to="/closed">Closed Trades</TradeNav>
         </div>
@@ -29,7 +29,7 @@ export default function Trade() {
       </StyledAllTrade>
 
       <>
-        <Route exact path="/" component={New} />
+        <Route path={["/", "/trade"]} component={New} />
         <Route path="/open" component={Open} />
         <Route path="/closed" component={Closed} />
       </>

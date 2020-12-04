@@ -5,6 +5,31 @@ import { fetc, ssbs, ssgm, smaz, cexp, sprl, scoc } from "../../data/buy_order";
 import BuyOrderCard from './buy_order';
 
 export default function New() {
+    return(       
+        <>
+            <Route exact path={["/", "/trade"]} component={BaseComponent} />
+            <Route path="/trade/fetc" component={Fetc} />
+            {/* <Route path="/trade/ssbs" component={Ssbs} />
+            <Route path="/trade/ssgm" component={Ssgm} />
+            <Route path="/trade/smaz" component={Smaz} />
+            <Route path="/trade/cexp" component={Cexp} />
+            <Route path="/trade/sprl" component={Sprl} />
+            <Route path="/trade/scoc" component={Scoc} /> */}
+        </>
+    )
+}
+
+export function Fetc() {
+    return (
+        <>
+            {
+                fetc.map(data => (<BuyOrderCard key={data.id} data={data} />))
+            }
+        </>
+    )
+}
+
+function BaseComponent(){
     const options = [
         { name: 'Select Commodity', value: null },
         { name: 'Fair Trade ETC FETC', value: 'fetc' },
@@ -21,46 +46,23 @@ export default function New() {
         const val = event.target.value;
         history.push(`/trade/${val}`)
     };
-
-    return(
-        <>
-            <StyleAllTrade>
-                <StyledNew>
-                    <button>Buy</button>
-                    <button>Sell</button>
-                    <p>for</p>
-                    <StyledP>Spot</StyledP>
-                </StyledNew>
-                <SelectTradeCover>
-                    <StyledTradeSelect onChange={handleChange}>
-                        {options.map(item => (
-                            <option key={item.value} value={item.value}>
-                            {item.name}
-                            </option>
-                        ))}
-                    </StyledTradeSelect>
-                </SelectTradeCover>
-            </StyleAllTrade>
-            
-            <>
-                <Route path="/trade/fetc" component={Fetc} />
-                {/* <Route path="/trade/ssbs" component={Ssbs} />
-                <Route path="/trade/ssgm" component={Ssgm} />
-                <Route path="/trade/smaz" component={Smaz} />
-                <Route path="/trade/cexp" component={Cexp} />
-                <Route path="/trade/sprl" component={Sprl} />
-                <Route path="/trade/scoc" component={Scoc} /> */}
-            </>
-        </>
-    )
-}
-
-export function Fetc() {
-    return (
-        <>
-            {
-                fetc.map(data => (<BuyOrderCard key={data.id} data={data} />))
-            }
-        </>
+    
+    return ( <StyleAllTrade>
+        <StyledNew>
+            <button>Buy</button>
+            <button>Sell</button>
+            <p>for</p>
+            <StyledP>Spot</StyledP>
+        </StyledNew>
+        <SelectTradeCover>
+            <StyledTradeSelect onChange={handleChange}>
+                {options.map(item => (
+                    <option key={item.value} value={item.value}>
+                    {item.name}
+                    </option>
+                ))}
+            </StyledTradeSelect>
+        </SelectTradeCover>
+    </StyleAllTrade>
     )
 }

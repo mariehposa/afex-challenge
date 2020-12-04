@@ -15,7 +15,8 @@ import {
   StyleAllTrade,
   StyledTradeSelect,
   StyledNew,
-  StyledP
+  StyledP,
+  SelectTradeCover
 } from "./styles";
 
 export default function Trade() {
@@ -65,7 +66,7 @@ export function New() {
                 <p>for</p>
                 <StyledP>Spot</StyledP>
             </StyledNew>
-            <SelectCover>
+            <SelectTradeCover>
                 <StyledTradeSelect>
                     <option value="">Select Commodity</option>
                     <option value="fetc">Fair Trade ETC FETC</option>
@@ -76,7 +77,7 @@ export function New() {
                     <option value="sprl">Paddy Rice SPRL</option>
                     <option value="scoc">Cocoa SCOC</option>
                 </StyledTradeSelect>
-            </SelectCover>
+            </SelectTradeCover>
         </StyleAllTrade>
     )
 }

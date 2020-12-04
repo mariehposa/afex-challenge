@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledBuyOrder, FirstDiv, SecondDiv, ThirdDiv, Coverall } from "./styles";
+import { StyledBuyOrder, FirstDiv, SecondDiv, ThirdDiv, Coverall, StyledPrice } from "./styles";
 import refresh from "../../images/refresh.svg";
 
 export default function BuyOrder() {
@@ -26,7 +26,7 @@ export default function BuyOrder() {
                 </div>
                 <div>
                     <p>Community</p>
-                    <select disabled>
+                    <select>
                         <option value="na">N/A</option>
                     </select>
                 </div>
@@ -45,11 +45,11 @@ export default function BuyOrder() {
                 <div>
                     <p>Buy Price/Unit (₦)</p>
                     <input type="text" />
-                    <div>
-                        <p>[Min Price: <span>9,750</span></p>
+                    <StyledPrice>
+                        <p> <span>[</span>Min Price: <span>9,750</span></p>
                         <p>Max Price: <span>10,250]</span></p>
-                    </div>
-                    <p>Estimated Value: #10,000.00</p>
+                    </StyledPrice>
+                    <p>Estimated Value: <span>#10,000.00</span></p>
                 </div>
             </SecondDiv>
 

@@ -166,19 +166,70 @@ export const FirstDiv = styled.div`
         border-radius: 2px;
         color: rgba(0,0,0,.65);
         height: 10vh;
+        cursor: pointer;
     }
 
     img {
-        width: 30px;
+        width: 15px;
+        margin-right: 5px;
+        margin-bottom: -3px;
     }
 `
 
 export const SecondDiv = styled.div`
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+
+    select, input {
+        width: 250px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #d9d9d9;
+        margin-top: -5px;
+    }
+
+    input {
+        width: 230px !important;
+    }
+
+    span {
+        font-weight: 600;
+    }
 `
 
 export const ThirdDiv = styled.div`
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
+
+    button {
+        padding: .5rem 3rem;
+        border-radius: 3px;
+        background-color: #51965e;
+        border: 1px solid #51965e;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    button:first-child {
+        background-color: #d9d9d9;
+        color: rgba(0,0,0,.65);
+        border: 1px solid #d9d9d9;
+    }
+`
+
+export const StyledPrice = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-top: -5px;
+
+    p {
+        font-size: 11px;
+        color: #e1261c;
+    }
+
+    span {
+        color: #51965e;
+    }
 `

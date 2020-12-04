@@ -2,7 +2,7 @@ import React from "react";
 import { Route, useHistory } from "react-router-dom";
 import { StyleAllTrade, StyledTradeSelect, StyledNew, StyledP, SelectTradeCover } from "./styles";
 import { fetc, ssbs, ssgm, smaz, cexp, sprl, scoc } from "../../data/buy_order";
-import BuyCard from './buy_order';
+import BuyOrderCard from './buy_order';
 
 export default function New() {
     const options = [
@@ -43,13 +43,13 @@ export default function New() {
             </StyleAllTrade>
             
             <>
-                <Route path="/fetc" component={Fetc} />
-                <Route path="/ssbs" component={Ssbs} />
-                <Route path="/ssgm" component={Ssgm} />
-                <Route path="/smaz" component={Smaz} />
-                <Route path="/cexp" component={Cexp} />
-                <Route path="/sprl" component={Sprl} />
-                <Route path="/scoc" component={Scoc} />
+                <Route path="/trade/fetc" component={Fetc} />
+                {/* <Route path="/trade/ssbs" component={Ssbs} />
+                <Route path="/trade/ssgm" component={Ssgm} />
+                <Route path="/trade/smaz" component={Smaz} />
+                <Route path="/trade/cexp" component={Cexp} />
+                <Route path="/trade/sprl" component={Sprl} />
+                <Route path="/trade/scoc" component={Scoc} /> */}
             </>
         </>
     )
@@ -58,7 +58,9 @@ export default function New() {
 export function Fetc() {
     return (
         <>
-
+            {
+                fetc.map(data => (<BuyOrderCard key={data.id} data={data} />))
+            }
         </>
     )
 }

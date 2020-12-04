@@ -6,7 +6,7 @@ export function BuyCard({data}) {
         <StyledRow>
             <td>{data.security}</td>
             <td>{data.qty}</td>
-            <td>#{data.bidPrice}</td>
+            <td>₦{data.bidPrice}</td>
             <Disable>No Stock</Disable>
         </StyledRow>
     )
@@ -17,7 +17,7 @@ export function SellCard({data}) {
         <StyledRow>
             <td>{data.security}</td>
             <td>{data.qty}</td>
-            <td>#{data.offerPrice}</td>
+            <td>₦{data.offerPrice}</td>
             <td>
                 <BuyButton>Buy</BuyButton>
             </td>

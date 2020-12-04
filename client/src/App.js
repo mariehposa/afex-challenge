@@ -1,5 +1,5 @@
 import Order from "./components/order/order";
-import Trade from "./components/trade/trade";
+import Trade from "./components/Trade/trade";
 import './App.css';
 
 function App() {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
 import { BuyCard, SellCard } from "./card";
 import {
@@ -29,17 +29,35 @@ import {
   StyledAllOrder,
   StyledTable,
   StyledRow,
-  NoDataStyle
+  NoDataStyle,
 } from "./styles";
 import envelope from "../../images/envelope.svg";
+import OptionButtons from "../custom/optionButton";
 
 export default function Order() {
-  // const [length, setLength] = useState(3);
-  // console.log(allSell)
-
-  // function handleChange(e) {
-  //     setLength({value: e.target.value});
-  // }
+  const [limit, setLimit] = useState(3);
+  const [data, setData] = useState(allBuy);
+  const [sellData, setSellData] = useState(allSell);
+  const [toggles, setToggles] = useState([]);  useEffect(() => {
+    var a = [];
+    var b = [];
+    if (toggles.length > 0) {
+      toggles.forEach((t) => {
+        const c = allBuy.filter((dataItem) =>
+          dataItem.security.toLowerCase().includes(t)
+        );
+        a = a.concat(c);        const d = allSell.filter((dataItem) =>
+          dataItem.security.toLowerCase().includes(t)
+        );
+        b = b.concat(d);
+      });
+    } else {
+      a = [...allBuy];
+      b = [...allSell];
+    }
+    setData(a.slice(0, limit));
+    setSellData(b.slice(0, limit));
+  }, [toggles, limit]);
 
   return (
     <StyledOverall>
@@ -54,14 +72,29 @@ export default function Order() {
           <InnerDiv>
             <p>Boards:</p>
             <div>
-              <StyledNav to="/">all</StyledNav>
-              <StyledNav to="/ssbs">ssbs</StyledNav>
-              <StyledNav to="/ssgm">ssgm</StyledNav>
-              <StyledNav to="/smaz">smaz</StyledNav>
-              <StyledNav to="/cexp">cexp</StyledNav>
-              <StyledNav to="/sprl">sprl</StyledNav>
-              <StyledNav to="/scoc">scoc</StyledNav>
-              <StyledNav to="/fetc">fetc</StyledNav>
+              <OptionButtons
+                options={[
+                  "all",
+                  "ssbs",
+                  "ssgm",
+                  "smaz",
+                  "cexp",
+                  "sprl",
+                  "scoc",
+                  "fetc",
+                ]}
+                onSelect={(selected) => {
+                  if (toggles.includes(selected)) {
+                    const a = toggles.filter((a) => a != selected);
+                    setToggles(a);
+                  } else {
+                    setToggles(toggles.concat(selected));
+                  }                  if (selected == "all") {
+                    setToggles([]);
+                  }
+                }}
+                selected={toggles}
+              />
             </div>
           </InnerDiv>
         </StyledDiv>
@@ -137,7 +170,6 @@ export function All() {
     </StyledAllOrder>
   );
 }
-
 
 export function Ssbs() {
   return (

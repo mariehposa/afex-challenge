@@ -2,21 +2,20 @@ import React, { useState } from "react";
 import { Route } from "react-router-dom";
 import {
   StyledOverall,
-  StyledAll,
-  StyledDiv,
-  StyledNav,
   StyledSelect,
-  InnerDiv,
   SelectCover,
-  StyledFNav,
-  StyledOrder,
-  StyledAllOrder,
-  StyledTable,
-  StyledRow,
   NoDataStyle
 } from "../order/styles";
 import envelope from "../../images/envelope.svg";
-import { TradeNav, StyledAllTrade, StyledTradeTable, StyledTradeRow, StyleAllTrade } from "./styles";
+import {
+  TradeNav,
+  StyledAllTrade,
+  StyledTradeTable,
+  StyledTradeRow,
+  StyleAllTrade,
+  StyledTradeSelect,
+  StyledNew,
+} from "./styles";
 
 export default function Trade() {
   // const [length, setLength] = useState(3);
@@ -58,9 +57,26 @@ export default function Trade() {
 
 export function New() {
     return(
-        <div>
-
-        </div>
+        <StyleAllTrade>
+            <StyledNew>
+                <button>Buy</button>
+                <button>sell</button>
+                <p>for</p>
+                <p>Spot</p>
+            </StyledNew>
+            <SelectCover>
+                <StyledTradeSelect>
+                    <option value="">Select Commodity</option>
+                    <option value="fetc">Fair Trade ETC FETC</option>
+                    <option value="ssbs">Soybean SSBS</option>
+                    <option value="ssgm">Sorghum SSGM</option>
+                    <option value="smaz">Maize SMAZ</option>
+                    <option value="cexp">Export Note CEXP</option>
+                    <option value="sprl">Paddy Rice SPRL</option>
+                    <option value="scoc">Cocoa SCOC</option>
+                </StyledTradeSelect>
+            </SelectCover>
+        </StyleAllTrade>
     )
 }
 

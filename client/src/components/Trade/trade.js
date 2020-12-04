@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route } from "react-router-dom";
+import { Route, useHistory } from "react-router-dom";
 import { StyledOverall, StyledSelect, SelectCover, NoDataStyle } from "../order/styles";
 import envelope from "../../images/envelope.svg";
 import BuyOrder from './buy_order'
@@ -16,13 +16,6 @@ import {
 } from "./styles";
 
 export default function Trade() {
-  // const [length, setLength] = useState(3);
-  // console.log(allSell)
-
-  // function handleChange(e) {
-  //     setLength({value: e.target.value});
-  // }
-
   return (
     <StyledOverall>
       <StyledAllTrade>
@@ -44,17 +37,34 @@ export default function Trade() {
         </SelectCover>
       </StyledAllTrade>
 
-      {/* <>
+      <>
         <Route exact path="/" component={New} />
         <Route path="/open" component={Open} />
         <Route path="/closed" component={Closed} />
-      </> */}
-      <BuyOrder />
+      </>
+      {/* <BuyOrder /> */}
     </StyledOverall>
   );
 }
 
 export function New() {
+    const options = [
+        { name: 'Select Commodity', value: null },
+        { name: 'Fair Trade ETC FETC', value: 'fetc' },
+        { name: 'Soybean SSBS', value: 'ssbs' },
+        { name: 'Sorghum SSGM', value: 'ssgm' },
+        { name: 'Maize SMAZ', value: 'smaz' },
+        { name: 'Export Note CEXP', value: 'cexp' },
+        { name: 'Paddy Rice SPRL', value: 'sprl' },
+        { name: 'Cocoa SCOC', value: 'scoc' }
+    ]
+
+    const history = useHistory();
+    const handleChange = (event) => {
+        const val = event.target.value;
+        history.push(`/trade/${val}`)
+    };
+
     return(
         <StyleAllTrade>
             <StyledNew>
@@ -64,15 +74,12 @@ export function New() {
                 <StyledP>Spot</StyledP>
             </StyledNew>
             <SelectTradeCover>
-                <StyledTradeSelect>
-                    <option value="">Select Commodity</option>
-                    <option value="fetc">Fair Trade ETC FETC</option>
-                    <option value="ssbs">Soybean SSBS</option>
-                    <option value="ssgm">Sorghum SSGM</option>
-                    <option value="smaz">Maize SMAZ</option>
-                    <option value="cexp">Export Note CEXP</option>
-                    <option value="sprl">Paddy Rice SPRL</option>
-                    <option value="scoc">Cocoa SCOC</option>
+                <StyledTradeSelect onChange={handleChange}>
+                    {options.map(item => (
+                        <option key={item.value} value={item.value}>
+                        {item.name}
+                        </option>
+                    ))}
                 </StyledTradeSelect>
             </SelectTradeCover>
         </StyleAllTrade>

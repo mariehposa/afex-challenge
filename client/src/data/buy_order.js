@@ -1,5 +1,5 @@
 export const fetc = [
-    {id: 1, cash_bal: 0.00, qty_owned: 0, current_price: 10000.00, buy_price: 10000, min_price: 9750, max_price: 10250, estimated_value: 10000}
+    {id: 1, current_price: 10000.00, buy_price: 10000, min_price: 9750, max_price: 10250, estimated_value: 10000}
 ]
 
 export const ssbs = [
